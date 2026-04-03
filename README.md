@@ -1,73 +1,109 @@
-# React + TypeScript + Vite
+# 🚀 AI Interview & Emotion Analyzer
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+An interactive web application that simulates real interview experiences using AI. It analyzes user responses, detects emotions, and provides intelligent feedback to help users improve their interview performance.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✨ Features
 
-## React Compiler
+* 🎤 Voice-based interview simulation
+* ⏱️ 60-second timer for each question
+* 🤖 AI-powered answer evaluation
+* 😊 Emotion detection with confidence score
+* 📊 Performance dashboard with insights
+* 🔐 User authentication system
+* 🎯 Multiple interview categories (HR, Technical, etc.)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 🛠️ Tech Stack
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+* **Frontend:** React + TypeScript (Vite)
+* **Speech Recognition:** Web Speech API
+* **AI Integration:** Custom scoring function / API
+* **State Management:** React Hooks
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+---
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## 📸 Preview
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+(Add your screenshots here)
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+![Dashboard](assets/dashboard.png)
+![Interview Screen](assets/interview.png)
+![Login Page](assets/login.png)
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+---
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## ⚙️ Installation & Setup
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/your-username/your-repo-name.git
+   ```
+
+2. Navigate to the project folder:
+
+   ```bash
+   cd your-repo-name
+   ```
+
+3. Install dependencies:
+
+   ```bash
+   npm install
+   ```
+
+4. Run the project:
+
+   ```bash
+   npm run dev
+   ```
+
+5. Open in browser:
+
+   ```
+   http://localhost:5173
+   ```
+
+---
+
+## 📈 How It Works
+
+1. User logs in
+2. Selects interview type
+3. Answers questions via voice
+4. AI evaluates answer & detects emotion
+5. Results displayed in dashboard
+
+---
+
+## 🎯 Purpose
+
+This project helps users:
+
+* Practice interviews in real-time
+* Improve communication skills
+* Get AI-based feedback instantly
+
+---
+
+## 🔮 Future Improvements
+
+* More accurate AI scoring
+* Video-based emotion detection
+* Exportable performance reports
+* More interview categories
+
+---
+
+## 🤝 Contributing
+
+Feel free to fork this repository and contribute!
+
+---
+
+## 📬 Contact
+
+For any queries or suggestions, feel free to reach out.
