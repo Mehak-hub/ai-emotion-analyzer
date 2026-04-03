@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>AI Mock Interview</title>
+<link rel="stylesheet" href="style.css">
+<style>
+
+.mic-container{
+margin-top:20px;
+display:none;
+flex-direction:column;
+align-items:center;
+}
+
+.mic-icon{
+font-size:40px;
+margin-bottom:10px;
+}
+
+.voice-bars{
+display:flex;
+gap:6px;
+}
+
+.voice-bars span{
+width:6px;
+height:20px;
+background:#4facfe;
+animation:voice 1s infinite ease-in-out;
+}
+
+.voice-bars span:nth-child(2){animation-delay:0.2s;}
+.voice-bars span:nth-child(3){animation-delay:0.4s;}
+.voice-bars span:nth-child(4){animation-delay:0.6s;}
+.voice-bars span:nth-child(5){animation-delay:0.8s;}
+
+@keyframes voice{
+0%{height:10px;}
+50%{height:40px;}
+100%{height:10px;}
+}
+
+</style>
+</head>
+
+<body>
+
+<h1>AI Mock Interview</h1>
+
+<div class="container">
+
+<div class="person interviewer">
+<h2>Interviewer</h2>
+<div id="question">Click start interview</div>
+<button onclick="askQuestion()">Ask Question</button>
+</div>
+
+<div class="person candidate">
+<h2>Candidate</h2>
+
+<video id="video" autoplay></video>
+
+<p>Emotion: <span id="emotion">Neutral</span></p>
+
+<button onclick="startAnswer()">Start Answer</button>
+
+<p id="answer"></p>
+<div class="mic-container" id="mic">
+<div class="mic-icon">🎤</div>
+
+<div class="voice-bars">
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

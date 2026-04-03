@@ -1,0 +1,58 @@
+body{
+font-family: Arial;
+text-align:center;
+background:#f4f4f4;
+}
+
+.container{
+display:flex;
+justify-content:space-around;
+margin-top:40px;
+}
+
+.person{
+background:white;
+padding:20px;
+border-radius:10px;
+box-shadow:0 0 10px rgba(0,0,0,0.2);
+width:300px;
+}
+
+video{
+width:100%;
+border-radius:10px;
+}
+
+button{
+padding:10px 20px;
+margin-top:10px;
+border:none;
+background:#4facfe;
+color:white;
+border-radius:6px;
+cursor:pointer;
+}
+.voice-bars{
+display:flex;
+gap:6px;
+margin-top:20px;
+justify-content:center;
+}
+
+.voice-bars span{
+width:6px;
+height:20px;
+background:#4facfe;
+animation:voice 1s infinite ease-in-out;
+}
+
+.voice-bars span:nth-child(2){animation-delay:0.2s;}
+.voice-bars span:nth-child(3){animation-delay:0.4s;}
+.voice-bars span:nth-child(4){animation-delay:0.6s;}
+.voice-bars span:nth-child(5){animation-delay:0.8s;}
+
+@keyframes voice{
+0%{height:10px;}
+50%{height:40px;}
+100%{height:10px;}
+}

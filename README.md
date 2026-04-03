@@ -1,52 +1,73 @@
-# ai-emotion-analyzer
-# AI Emotion-Based Interview Analyzer
+# React + TypeScript + Vite
 
-> MCA Final Year Project | AI | Computer Vision | Web Application
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
- Project Overview
-This project is a real-time AI-based interview analyzer that detects user emotions, converts speech to text, and evaluates responses. It simulates an intelligent interview environment by analyzing facial expressions and verbal answers.
+Currently, two official plugins are available:
 
- Objective
-To build an interactive system that can assess user responses during interviews using emotion detection and AI-based scoring.
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
- Technologies Used
-- Frontend: React + TypeScript  
-- Computer Vision: face-api.js  
-- Speech Recognition: Web Speech API  
-- AI Integration: Claude AI (Anthropic) for answer evaluation  
-- Storage: localStorage  
+## React Compiler
 
- Key Features
-- Real-time facial emotion detection using webcam  
-- Voice-to-text conversion for capturing answers  
-- AI-based scoring and feedback on responses  
-- Interactive and user-friendly interface  
-- Local storage of user session data  
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
- Workflow
-1. User starts interview session  
-2. Webcam captures facial expressions  
-3. Speech is converted into text  
-4. Emotion data + answers are processed  
-5. Claude AI evaluates responses  
-6. Feedback and score are displayed  
+## Expanding the ESLint configuration
 
- Outcome
-- Successfully built a working prototype of an AI-powered interview system  
-- Demonstrated integration of computer vision, speech processing, and AI evaluation  
-- Provided real-time feedback simulation for users  
+If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
 
- Project Structure
-- `src/` – frontend source code  
-- `components/` – UI components  
-- `utils/` – helper functions  
-- `assets/` – images and resources  
+```js
+export default defineConfig([
+  globalIgnores(['dist']),
+  {
+    files: ['**/*.{ts,tsx}'],
+    extends: [
+      // Other configs...
 
- Future Improvements
-- Store data in a database instead of localStorage  
-- Improve emotion detection accuracy  
-- Add analytics dashboard for performance tracking  
-- Deploy as a full-stack web application  
+      // Remove tseslint.configs.recommended and replace with this
+      tseslint.configs.recommendedTypeChecked,
+      // Alternatively, use this for stricter rules
+      tseslint.configs.strictTypeChecked,
+      // Optionally, add this for stylistic rules
+      tseslint.configs.stylisticTypeChecked,
 
- Author
-Mehak Parekh
+      // Other configs...
+    ],
+    languageOptions: {
+      parserOptions: {
+        project: ['./tsconfig.node.json', './tsconfig.app.json'],
+        tsconfigRootDir: import.meta.dirname,
+      },
+      // other options...
+    },
+  },
+])
+```
+
+You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+
+```js
+// eslint.config.js
+import reactX from 'eslint-plugin-react-x'
+import reactDom from 'eslint-plugin-react-dom'
+
+export default defineConfig([
+  globalIgnores(['dist']),
+  {
+    files: ['**/*.{ts,tsx}'],
+    extends: [
+      // Other configs...
+      // Enable lint rules for React
+      reactX.configs['recommended-typescript'],
+      // Enable lint rules for React DOM
+      reactDom.configs.recommended,
+    ],
+    languageOptions: {
+      parserOptions: {
+        project: ['./tsconfig.node.json', './tsconfig.app.json'],
+        tsconfigRootDir: import.meta.dirname,
+      },
+      // other options...
+    },
+  },
+])
+```

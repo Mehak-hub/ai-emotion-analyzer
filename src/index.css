@@ -1,0 +1,42 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body, #root {
+  min-height: 100vh;
+  background: #080f1e;
+  color: #e2e8f0;
+  font-family: 'Segoe UI', 'Helvetica Neue', sans-serif;
+}
+
+button {
+  font-family: 'Segoe UI', 'Helvetica Neue', sans-serif;
+  cursor: pointer;
+}
+
+input {
+  font-family: 'Segoe UI', 'Helvetica Neue', sans-serif;
+}
+
+/* Remove default input autofill white background */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0px 1000px #080f1e inset;
+  -webkit-text-fill-color: #f1f5f9;
+  caret-color: #f1f5f9;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0d1726;
+}
+::-webkit-scrollbar-thumb {
+  background: #1e2d45;
+  border-radius: 3px;
+}
