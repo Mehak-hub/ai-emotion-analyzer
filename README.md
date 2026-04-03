@@ -27,8 +27,6 @@ An interactive web application that simulates real interview experiences using A
 
 ## 📸 Preview
 
-(Add your screenshots here)
-
 ![Dashboard](assets/dashboard.png)
 ![Interview Screen](assets/interview.png)
 ![Login Page](assets/login.png)
@@ -82,7 +80,6 @@ An interactive web application that simulates real interview experiences using A
 ## 🎯 Purpose
 
 This project helps users:
-
 * Practice interviews in real-time
 * Improve communication skills
 * Get AI-based feedback instantly
