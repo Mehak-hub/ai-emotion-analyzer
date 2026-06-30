@@ -1,3 +1,6 @@
+🐍 Also built a Python + Flask version: 
+> [AI-Mock-Interview-Flask-Python]      https://github.com/Mehak-hub/AI-Mock-Interview-Flask-Python-
+
 # 🚀 AI Interview & Emotion Analyzer
 
 An interactive web application that simulates real interview experiences using AI. It analyzes user responses, detects emotions, and provides intelligent feedback to help users improve their interview performance.
